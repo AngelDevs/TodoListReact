@@ -1,0 +1,13 @@
+.container {
+	display: inline-block;
+	padding: 1rem;
+}
+
+.container-fluid {
+	padding: 1rem;
+	width: 100%;
+}
+
+.body-container {
+	@include bg('blue', '/img/bg.jpg');
+}

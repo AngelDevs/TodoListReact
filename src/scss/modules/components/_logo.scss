@@ -1,0 +1,12 @@
+.logo {
+	width: 2rem;
+	grid-area: logo;
+}
+
+.logo-title {
+	grid-area: title;
+	color: bisque;
+	font-style: italic;
+	letter-spacing: 2px;
+	font-weight: bold;
+}

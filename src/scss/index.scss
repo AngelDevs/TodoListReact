@@ -1,0 +1,22 @@
+//Base import
+@import './base/reset';
+
+//Layout import
+@import './layout/general';
+@import './layout/body';
+@import './layout/header';
+@import './layout/footer';
+@import './layout/nav';
+@import './layout/main';
+
+//Theme
+@import './themes/mainTheme';
+
+//modules
+@import './modules/componentsNexus';
+
+//responsive
+@import './responsive/mobile';
+@import './responsive/tablet';
+@import './responsive/desktop';
+@import './responsive/common';

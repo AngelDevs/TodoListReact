@@ -1,0 +1,27 @@
+.header {
+	position: relative;
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-areas: 'logoContainer . menu';
+	background-color: $primaryColor;
+
+	.header__logo-wrapper {
+		grid-area: logoContainer;
+	}
+
+	.header__bars {
+		grid-area: menu;
+		align-self: center;
+		color: $secundaryColor;
+		font-size: 2rem;
+		cursor: pointer;
+
+		&:hover {
+			color: lighten($secundaryColor, 15%);
+		}
+		&:active {
+			color: darken($secundaryColor, 15%);
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@import '../base/media-mixins';
+
+@include media-breakpoint-up(md) {
+	.aside {
+		display: block;
+	}
+
+	.form {
+		.form__field-wrapper {
+			display: grid;
+			grid-template-rows: unset;
+			grid-template-columns: 8rem 1rem 1fr;
+			grid-template-areas:
+				'label . input'
+				'.     . small';
+			align-items: center;
+
+			label {
+				text-align: right;
+			}
+		}
+	}
+}

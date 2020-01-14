@@ -1,0 +1,111 @@
+.TodoList {
+	display: grid;
+	row-gap: 2rem;
+	padding: 1rem;
+	max-width: 950px;
+	height: auto;
+	margin: 0 auto;
+	background: rgba(89, 193, 115, 0.5); /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		rgba(89, 193, 115, 0.6),
+		rgba(161, 127, 224, 0.6),
+		rgba(93, 38, 193, 0.6)
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		rgba(89, 193, 115, 0.6),
+		rgba(161, 127, 224, 0.6),
+		rgba(93, 38, 193, 0.6)
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	.TodoList__activities-wrapper {
+		display: grid;
+		row-gap: 0.5rem;
+	}
+
+	.TodoList__activity-wrapper {
+		padding: 0.5rem;
+		display: grid;
+		grid-template-columns: 1fr auto auto;
+		align-items: center;
+		background-color: rgba(169, 169, 169, 0.8);
+
+		.TodoList__activity {
+			color: white;
+			font-weight: 600;
+
+			&--checked {
+				text-decoration: line-through;
+			}
+		}
+		.TodoList__erase-btn {
+			color: crimson;
+			text-shadow: 0px 0px 2px black;
+			font-size: 1.5rem;
+			cursor: pointer;
+
+			&:hover {
+				color: lighten(crimson, 15%);
+			}
+
+			&:active {
+				color: darken(crimson, 15%);
+			}
+		}
+	}
+
+	.form__field-wrapper {
+		display: grid;
+		grid-template-rows: repeat(1fr, auto);
+		grid-template-areas:
+			'label'
+			'input'
+			'small';
+		gap: 1rem;
+
+		.form__label {
+			grid-area: label;
+			color: white;
+		}
+
+		.form__input {
+			color: white;
+			grid-area: input;
+			background-color: rgba(65, 105, 225, 0.465);
+		}
+
+		.form__input-select {
+			option {
+				background-color: $primaryColor;
+			}
+		}
+
+		.form__small {
+			grid-area: small;
+			font-size: 0.8rem;
+			font-style: italic;
+			color: white;
+		}
+	}
+
+	.form__button {
+		justify-self: center;
+		padding: 0.5rem;
+		width: 100px;
+		border: 2px solid $secundaryColor;
+		background-color: rgba(29, 38, 113, 0.4);
+		color: white;
+		font-weight: bold;
+		letter-spacing: 2px;
+		cursor: pointer;
+
+		&:hover {
+			background-color: lighten(rgba(29, 38, 113, 0.4), 25%);
+		}
+
+		&:active {
+			background-color: darken(rgba(29, 38, 113, 0.4), 25%);
+		}
+	}
+}
